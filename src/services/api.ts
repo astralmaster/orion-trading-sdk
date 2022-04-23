@@ -13,6 +13,8 @@ export class Api {
 
         Api.instance = this
 
+        axios.defaults.headers.common['user-agent'] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"
+
         this.orionBlockchain = axios.create({
             baseURL: `${network.ORION}/api`,
             timeout: 5000
